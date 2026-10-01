@@ -306,6 +306,46 @@
     body.print-client-card .rc-rescisao-box .rrow-total b { font-size: 15px; }
     body.print-client-card .rc-foot { padding: 8px 16px 10px; font-size: 9px; margin-top: 8px; }
   }
+
+  /* ---- Celular: a grade não pode crescer até a largura da tabela (880 px) ---- */
+  .shell > *, main, .rail, .card { min-width: 0; }
+  [hidden] { display: none !important; }
+  table.rc-table td, table.rc-table th { white-space: nowrap; }
+  .table-wrap, .rc-table-wrap { max-width: 100%; -webkit-overflow-scrolling: touch; }
+  @media (max-width: 640px) {
+    body { font-size: 14px; }
+    .app { padding: 10px 10px 48px; }
+    .masthead { flex-wrap: wrap; gap: 8px 12px; padding: 12px 14px; border-radius: 10px; }
+    .masthead img { height: 44px; }
+    .masthead > div:not(.spacer):not(.campaign) { flex: 1 1 200px; min-width: 0; }
+    .masthead h1 { font-size: 17px; line-height: 1.2; }
+    .masthead .sub { font-size: 11.5px; }
+    .masthead .spacer { display: none; }
+    .masthead .campaign { order: 3; font-size: 10px; }
+    .dropzone { padding: 18px 12px; }
+    .dropzone .title { font-size: 15px; }
+    .client-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .client-card { padding: 10px; }
+    .client-card .ctotal { font-size: 15px; }
+    .card { padding: 13px; }
+    .field-row { gap: 8px; }
+    .section-title { font-size: 15.5px; flex-wrap: wrap; }
+    .output-row .v { white-space: normal; }
+    .resumo-card { margin: 8px 0 24px; border-radius: 12px; }
+    .rc-head { padding: 16px 14px; }
+    .rc-head img { height: 50px; }
+    .rc-body { padding: 16px 12px 6px; }
+    .rc-total-val { font-size: 30px; }
+    .rc-tabs { flex-wrap: wrap; }
+    .rc-tab { flex: 1 1 33%; padding: 10px 6px; font-size: 11.5px; line-height: 1.25; }
+    .rc-actions { padding: 14px 12px 4px; }
+    .rc-actions .btn { flex: 1 1 140px; }
+    .rc-next { flex-direction: column; align-items: flex-start; }
+    .rc-reneg-result .rrow, .rc-rescisao-box .rrow { gap: 10px; font-size: 12.5px; }
+    .rc-rescisao-box .rrow span { flex: 1; min-width: 0; }
+    .rc-foot { padding: 12px; }
+  }
+  @media (max-width: 360px) { .client-grid { grid-template-columns: 1fr; } }
 </style>
 
 <div class="app">
